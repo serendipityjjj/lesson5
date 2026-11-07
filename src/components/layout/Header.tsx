@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { HelpCircle, Home } from 'lucide-react';
 import { HelpGuideModal } from '../common/HelpGuideModal';
+import logo from '../../assets/logo.png';
 
 export const Header: React.FC<{ onHome: () => void }> = ({ onHome }) => {
   const [showHelpModal, setShowHelpModal] = useState<boolean>(false);
@@ -15,6 +16,7 @@ export const Header: React.FC<{ onHome: () => void }> = ({ onHome }) => {
           <div>
             <h1 className="text-base md:text-xl font-bold text-slate-800 leading-tight flex items-center gap-1.5">
               중국어교실 <span className="text-[0.6875rem] md:text-sm font-medium text-red-600 bg-red-50 px-1.5 py-0.5 rounded-full">생활중국어</span>
+              <img src={logo} alt="NE능률" className="h-5 md:h-6 w-auto ml-1" />
             </h1>
           </div>
         </button>
@@ -53,4 +55,3 @@ export const Header: React.FC<{ onHome: () => void }> = ({ onHome }) => {
     </>
   );
 };
-
