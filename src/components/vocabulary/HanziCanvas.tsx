@@ -324,13 +324,6 @@ export const HanziCanvas: React.FC<HanziCanvasProps> = ({
                   touchAction: 'none',
                 }}
               />
-
-              {/* 퀴즈 진행 중 현재 글자 표시 뱃지 */}
-              {currentMode === 'quiz' && characters.length > 1 && (
-                <span className="absolute bottom-1 right-1.5 text-[0.5625rem] md:text-xs font-bold text-slate-400 bg-white/90 px-1.5 py-0.5 rounded-md shadow-xs">
-                  {index + 1}/{characters.length}
-                </span>
-              )}
             </div>
           );
         })}
